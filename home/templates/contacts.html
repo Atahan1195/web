@@ -1,0 +1,52 @@
+<!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Need Help? <span>Contact Us</span></p>
+        </div>
+        <div class="row gy-4">
+        {% for contact in contacts %}
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-map flex-shrink-0"></i>
+              <div>
+                <h3>Our Address</h3>
+                <p>{{ contact.location }}</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+              <i class="icon bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>{{ contact.email }}</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>{{ contact.phone }}</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-share flex-shrink-0"></i>
+              <div>
+                <h3>Opening Hours</h3>
+                <div><strong>Mon-Fri:</strong> {{ contact.opening_hours_mon_fri | safe }}
+                  <strong>Saturday-Sunday:  <p><span style="color:#f1c40f"><strong>09:00am - 01:00am</strong></span></p></strong>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+        {% endfor %}
+        </div>
+      </div>
+    </section><!-- End Contact Section -->

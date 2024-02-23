@@ -1,0 +1,61 @@
+<section id="chefs" class="chefs section-bg">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Chefs</h2>
+          <p>Our <span>Professional</span> Chefs</p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+              {% for c in chef %}
+                  {% if c.id == 1 %}
+                      <div class="chef-member">
+                          <div class="member-img">
+                              <img src="{{ c.photo.url }}" class="img-fluid" alt="">
+                                  <div class="member-info">
+                                      <h4>{{ c.name }}</h4>
+                                      <span>{{ c.chef_position }}</span>
+                                      <p>{{ c.about | safe }}</p>
+                                  </div>
+                          </div>
+                      </div><!-- End Chefs Member -->
+                  {% endif %}
+              {% endfor %}
+          </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+              {% for c in chef %}
+                  {% if c.id == 2 %}
+                      <div class="chef-member">
+                      <div class="member-img">
+                      <img src="{{ c.photo.url }}" class="img-fluid" alt="">
+                      <div class="member-info">
+                      <h4>{{ c.name }}</h4>
+                      <span>{{ c.chef_position }}</span>
+                      <p>{{ c.about | safe }}</p>
+                      </div>
+                      </div>
+                      </div><!-- End Chefs Member -->
+                  {% endif %}
+              {% endfor %}
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+              {% for c in chef %}
+                  {% if c.id == 3 %}
+                      <div class="chef-member">
+                      <div class="member-img">
+                      <img src="{{ c.photo.url }}" class="img-fluid" alt="">
+                      <div class="member-info">
+                      <h4>{{ c.name }}</h4>
+                      <span>{{ c.chef_position }}</span>
+                      <p>{{ c.about | safe }}</p>
+                      </div>
+                      </div>
+                      </div><!-- End Chefs Member -->
+                  {% endif %}
+              {% endfor %}
+            </div>
+
+
+        </div>
+      </div>
+</section>

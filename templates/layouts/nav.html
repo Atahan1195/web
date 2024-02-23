@@ -1,0 +1,21 @@
+<nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            {% if user.groups.all.0.name == 'manager' or user.is_staff %}
+                <li><a href="{% url 'manager:manager_page' %}">Manager</a></li>
+            {% endif %}
+          <li><a href="#contact">Contact</a></li>
+            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#chefs">Chefs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>  
+              </ul>
+          </li>  
+        </ul>
+      </nav><!-- .navbar -->
